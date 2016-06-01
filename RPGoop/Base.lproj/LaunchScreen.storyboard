@@ -20,9 +20,44 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="lg6-dX-obs">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="MkC-JY-EuY" userLabel="groundleft">
+                                <rect key="frame" x="0.0" y="519" width="382" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="382" id="3FW-0v-teJ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="81" id="Ayh-aR-Fpk"/>
+                                    <constraint firstAttribute="width" constant="382" id="BKJ-90-Cbk"/>
+                                    <constraint firstAttribute="height" constant="70" id="c4b-xW-0JV"/>
+                                    <constraint firstAttribute="height" constant="81" id="soh-s2-pTS"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="c4b-xW-0JV"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="p1F-Eh-aSI" userLabel="groundright">
+                                <rect key="frame" x="379" y="519" width="382" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="81" id="74E-41-JND"/>
+                                    <constraint firstAttribute="width" constant="382" id="Kr3-Ji-bVB"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="382" id="chi-Ja-aKd"/>
+                                    <constraint firstAttribute="height" constant="81" id="foy-FR-MNo"/>
+                                    <constraint firstAttribute="height" constant="70" id="sKI-dR-roT"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="sKI-dR-roT"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="p1F-Eh-aSI" firstAttribute="leading" secondItem="MkC-JY-EuY" secondAttribute="trailing" constant="-3" id="9Lx-k0-kBh"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="p1F-Eh-aSI" secondAttribute="bottom" id="BXa-WY-DHn"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="MkC-JY-EuY" secondAttribute="bottom" id="DnJ-U0-PFo"/>
+                            <constraint firstItem="MkC-JY-EuY" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="GQn-rj-WPw"/>
+                            <constraint firstItem="p1F-Eh-aSI" firstAttribute="leading" secondItem="MkC-JY-EuY" secondAttribute="trailing" constant="-3" id="SHm-vR-oxU"/>
                             <constraint firstItem="lg6-dX-obs" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="eK0-gy-w8R"/>
                             <constraint firstItem="lg6-dX-obs" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ghS-7p-ydS"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="lg6-dX-obs" secondAttribute="bottom" id="ljp-Xl-4Bl"/>
@@ -37,5 +72,6 @@
     </scenes>
     <resources>
         <image name="bg" width="768" height="1024"/>
+        <image name="ground" width="768" height="164"/>
     </resources>
 </document>

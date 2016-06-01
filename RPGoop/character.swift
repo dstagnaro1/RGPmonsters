@@ -17,6 +17,10 @@ class Character {
         return _attackPower
     }
     
+    func attackStronger() {
+        _attackPower += 1
+    }
+    
     var hp: Int {
         return _hp
     }

@@ -10,10 +10,10 @@ import Foundation
 
 class Kimara: Enemy {
     
-    let IMMUNE_MAX = 15
+    let IMMUNE_MAX = 0
     
     override var loot: [String] {
-        return ["Tough Hide", "Kimara Venom", "Rare Trident"]
+        return ["a Tough Hide", "Kimara Venom", "a Rare Trident", "a Gold Necklace"]
     }
     
     override var type: String {

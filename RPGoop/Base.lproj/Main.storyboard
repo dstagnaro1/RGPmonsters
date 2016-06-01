@@ -47,7 +47,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="print" translatesAutoresizingMaskIntoConstraints="NO" id="nxr-RP-TfN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="print" translatesAutoresizingMaskIntoConstraints="NO" id="nxr-RP-TfN" userLabel="printImg">
                                 <rect key="frame" x="120" y="9" width="360" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="EBD-or-A6F"/>
@@ -75,14 +75,24 @@
                                     <action selector="chestTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XL1-rG-DLg"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="MKf-iu-Dg8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="MKf-iu-Dg8" userLabel="playerImage">
                                 <rect key="frame" x="20" y="387" width="123" height="132"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="123" id="EYr-C8-6NA"/>
                                     <constraint firstAttribute="height" constant="132" id="K5f-FS-9c3"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enem1" translatesAutoresizingMaskIntoConstraints="NO" id="JhF-aP-qhI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asb-4Z-Get" userLabel="playerNameLabel">
+                                <rect key="frame" x="0.0" y="527" width="201" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="SRT-ap-WAr"/>
+                                    <constraint firstAttribute="width" constant="201" id="i6p-Lg-bS2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enem1" translatesAutoresizingMaskIntoConstraints="NO" id="JhF-aP-qhI" userLabel="enemyImage">
                                 <rect key="frame" x="402" y="378" width="178" height="141"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="132" id="2ey-yN-3D3"/>
@@ -97,7 +107,17 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 hp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeI-pq-jv3" userLabel="playerHealthLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enemy name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzW-ya-pHM" userLabel="enemyNameLabel">
+                                <rect key="frame" x="399" y="527" width="201" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="NXE-8e-MVw"/>
+                                    <constraint firstAttribute="width" constant="201" id="wDb-nx-uMZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 hp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeI-pq-jv3" userLabel="playerHealthLabel">
                                 <rect key="frame" x="41" y="327" width="80" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="6hz-Cv-r7H"/>
@@ -146,13 +166,17 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OvW-t8-0c1" secondAttribute="bottom" id="OEl-cp-tWd"/>
                             <constraint firstAttribute="trailing" secondItem="JhF-aP-qhI" secondAttribute="trailing" constant="20" id="Q0g-N9-6Xo"/>
                             <constraint firstItem="OvW-t8-0c1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RcM-PK-u4s"/>
+                            <constraint firstItem="asb-4Z-Get" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UqX-ei-xWT"/>
                             <constraint firstItem="OvW-t8-0c1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="V1d-Ec-ar8"/>
                             <constraint firstAttribute="bottomMargin" secondItem="BQM-wX-4ay" secondAttribute="bottom" constant="208" id="YZG-17-Jfh"/>
                             <constraint firstItem="nxr-RP-TfN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="9" id="Zj3-Te-ESe"/>
                             <constraint firstItem="Arf-qm-dzp" firstAttribute="centerY" secondItem="nxr-RP-TfN" secondAttribute="centerY" id="aFd-wo-Nac"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="asb-4Z-Get" secondAttribute="bottom" constant="12" id="cJg-6i-XJt"/>
+                            <constraint firstAttribute="trailing" secondItem="IzW-ya-pHM" secondAttribute="trailing" id="dZ2-3q-9j2"/>
                             <constraint firstAttribute="trailing" secondItem="OvW-t8-0c1" secondAttribute="trailing" id="deE-cE-Nb2"/>
                             <constraint firstAttribute="trailing" secondItem="mgR-HL-0Vb" secondAttribute="trailing" id="eNd-OJ-iRO"/>
                             <constraint firstItem="mgR-HL-0Vb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fyR-Zv-bj9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IzW-ya-pHM" secondAttribute="bottom" constant="12" id="kkV-lc-8r5"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VhV-zx-jht" secondAttribute="bottom" id="md6-0l-pkK"/>
                             <constraint firstItem="nxr-RP-TfN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nMv-Eh-6IX"/>
                             <constraint firstItem="MKf-iu-Dg8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="olP-O1-YGD"/>
@@ -176,8 +200,9 @@
                         <outlet property="chestButton" destination="hkx-WO-d5S" id="K6H-hb-bNU"/>
                         <outlet property="enemyHealthLabel" destination="BQM-wX-4ay" id="PRj-V9-Khf"/>
                         <outlet property="enemyImage" destination="JhF-aP-qhI" id="myy-Ew-cFi"/>
+                        <outlet property="enemyNameLabel" destination="IzW-ya-pHM" id="J8j-lh-zqt"/>
                         <outlet property="gameLabel" destination="Arf-qm-dzp" id="SMU-nA-Tb3"/>
-                        <outlet property="playerHealthLabel" destination="NeI-pq-jv3" id="7iw-ID-xdj"/>
+                        <outlet property="playerNameLabel" destination="asb-4Z-Get" id="Sk1-UF-NFI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -17,6 +17,8 @@
 		800E846F1CFDFE3900A4C33D /* enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800E846E1CFDFE3900A4C33D /* enemy.swift */; };
 		800E84731CFE044B00A4C33D /* kimara.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800E84721CFE044B00A4C33D /* kimara.swift */; };
 		800E84751CFE0A0500A4C33D /* iceWizard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800E84741CFE0A0500A4C33D /* iceWizard.swift */; };
+		80D33B731CFF5CE100D99CF1 /* scissors.aif in Resources */ = {isa = PBXBuildFile; fileRef = 80D33B721CFF5CE100D99CF1 /* scissors.aif */; };
+		80D33B751CFF5CF800D99CF1 /* xylo.aif in Resources */ = {isa = PBXBuildFile; fileRef = 80D33B741CFF5CF800D99CF1 /* xylo.aif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		800E846E1CFDFE3900A4C33D /* enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = enemy.swift; sourceTree = "<group>"; };
 		800E84721CFE044B00A4C33D /* kimara.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kimara.swift; sourceTree = "<group>"; };
 		800E84741CFE0A0500A4C33D /* iceWizard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iceWizard.swift; sourceTree = "<group>"; };
+		80D33B721CFF5CE100D99CF1 /* scissors.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = scissors.aif; sourceTree = "<group>"; };
+		80D33B741CFF5CF800D99CF1 /* xylo.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = xylo.aif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 		800E84571CFDF96600A4C33D /* RPGoop */ = {
 			isa = PBXGroup;
 			children = (
+				80D33B721CFF5CE100D99CF1 /* scissors.aif */,
+				80D33B741CFF5CF800D99CF1 /* xylo.aif */,
 				800E84581CFDF96600A4C33D /* AppDelegate.swift */,
 				800E845A1CFDF96600A4C33D /* ViewController.swift */,
 				800E845C1CFDF96600A4C33D /* Main.storyboard */,
@@ -141,6 +147,8 @@
 				800E84631CFDF96600A4C33D /* LaunchScreen.storyboard in Resources */,
 				800E84601CFDF96600A4C33D /* Assets.xcassets in Resources */,
 				800E845E1CFDF96600A4C33D /* Main.storyboard in Resources */,
+				80D33B731CFF5CE100D99CF1 /* scissors.aif in Resources */,
+				80D33B751CFF5CF800D99CF1 /* xylo.aif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +315,7 @@
 				800E84691CFDF96600A4C33D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,7 +10,7 @@ import Foundation
 
 class IceWizard: Enemy {
     override var loot: [String] {
-        return ["Ice Wand", "Ice Amulet", "Salted Pork"]
+        return ["an Ice Wand", "an Ice Amulet", "some Salted Pork", "Lightning Braclets"]
     }
     
     override var type: String {
