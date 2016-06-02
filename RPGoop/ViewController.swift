@@ -13,8 +13,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var gameLabel: UILabel!
     
-    // @IBOutlet weak var playerHealthLabel: UILabel!
-    
     @IBOutlet weak var enemyHealthLabel: UILabel!
     @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var enemyNameLabel: UILabel!
@@ -49,7 +47,7 @@ class ViewController: UIViewController {
             print(err.debugDescription)
         }
         
-        player = Player(name: "Ghostman", hp: 120, attackPower: 0)
+        player = Player(name: "Ghostman", hp: 120, attackPower: 13)
         generateRandomEnemy()
     }
     
@@ -70,7 +68,7 @@ class ViewController: UIViewController {
     func newRound () {
         
         player.attackStronger()
-        print("player attack power \(player.attackPower)")
+//        print("player attack power \(player.attackPower)")
         
         enemyNameLabel.text = "\(enemy.type)"
         enemyHealthLabel.text = "\(enemy.hp) HP"
@@ -85,6 +83,9 @@ class ViewController: UIViewController {
         attackButton.hidden = false
         
         gameLabel.text = "A wild \(enemy.type) showed up!"
+        
+//        print("player inventory \(player.inventory)")
+        
     }
     
     func generateRandomEnemy() {
@@ -102,17 +103,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func attackTapped(sender: UIButton) {
-        playAttackSound()
+         playAttackSound()
         
         if enemy.attemptAttack(player.attackPower) {
-            
             gameLabel.text = "\(player.name) attacked \(enemy.type) for \(player.attackPower) HP!"
             enemyHealthLabel.text = "\(enemy.hp) HP"
-            
         } else {
-            
             gameLabel.text = "Attack was unsuccessful!"
-            
         }
         
         if let loot = enemy.dropLoot() {
@@ -121,7 +118,15 @@ class ViewController: UIViewController {
             chestButton.hidden = false
         }
         
-        if !enemy.isAlive {
+//        if !enemy.isAlive {
+//            enemyHealthLabel.text = ""
+//            gameLabel.text = "\(player.name) killed \(enemy.type)!"
+//            enemyImage.hidden = true
+//            enemyNameLabel.hidden = true
+//            attackButton.hidden = true
+//        }
+        
+        if enemy.isDead {
             enemyHealthLabel.text = ""
             gameLabel.text = "\(player.name) killed \(enemy.type)!"
             enemyImage.hidden = true
@@ -137,8 +142,6 @@ class ViewController: UIViewController {
         
         chestButton.hidden = true
         gameLabel.text = chestMessage
-        
-        //play xylo
         
         NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.generateRandomEnemy), userInfo: nil, repeats: false)
     }

@@ -35,6 +35,16 @@ class Character {
         }
     }
     
+    var isDead: Bool {
+        get {
+            if hp <= 0 {
+                return true
+            } else {
+                return false
+            }
+        }
+    }
+    
     init(startingHP: Int, attackPower: Int) {
         self._hp = startingHP
         self._attackPower = attackPower
