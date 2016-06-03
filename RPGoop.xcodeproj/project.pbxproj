@@ -68,19 +68,19 @@
 		800E84571CFDF96600A4C33D /* RPGoop */ = {
 			isa = PBXGroup;
 			children = (
-				80D33B721CFF5CE100D99CF1 /* scissors.aif */,
-				80D33B741CFF5CF800D99CF1 /* xylo.aif */,
 				800E84581CFDF96600A4C33D /* AppDelegate.swift */,
 				800E845A1CFDF96600A4C33D /* ViewController.swift */,
-				800E845C1CFDF96600A4C33D /* Main.storyboard */,
-				800E845F1CFDF96600A4C33D /* Assets.xcassets */,
-				800E84611CFDF96600A4C33D /* LaunchScreen.storyboard */,
-				800E84641CFDF96600A4C33D /* Info.plist */,
 				800E846A1CFDFA1800A4C33D /* character.swift */,
 				800E846C1CFDFBCC00A4C33D /* player.swift */,
 				800E846E1CFDFE3900A4C33D /* enemy.swift */,
 				800E84721CFE044B00A4C33D /* kimara.swift */,
 				800E84741CFE0A0500A4C33D /* iceWizard.swift */,
+				800E845C1CFDF96600A4C33D /* Main.storyboard */,
+				800E84611CFDF96600A4C33D /* LaunchScreen.storyboard */,
+				80D33B721CFF5CE100D99CF1 /* scissors.aif */,
+				80D33B741CFF5CF800D99CF1 /* xylo.aif */,
+				800E845F1CFDF96600A4C33D /* Assets.xcassets */,
+				800E84641CFDF96600A4C33D /* Info.plist */,
 			);
 			path = RPGoop;
 			sourceTree = "<group>";

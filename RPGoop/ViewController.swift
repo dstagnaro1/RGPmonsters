@@ -118,14 +118,6 @@ class ViewController: UIViewController {
             chestButton.hidden = false
         }
         
-//        if !enemy.isAlive {
-//            enemyHealthLabel.text = ""
-//            gameLabel.text = "\(player.name) killed \(enemy.type)!"
-//            enemyImage.hidden = true
-//            enemyNameLabel.hidden = true
-//            attackButton.hidden = true
-//        }
-        
         if enemy.isDead {
             enemyHealthLabel.text = ""
             gameLabel.text = "\(player.name) killed \(enemy.type)!"
